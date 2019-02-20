@@ -1,8 +1,12 @@
+# noinspection PyUnresolvedReferences
 from selenium import webdriver
+# noinspection PyUnresolvedReferences
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 
-# this Base class is serving basic attributes for every single page inherited from Page class
+
+# this Base class is serving basic attributes for every single page
+# inherited from Page class
 
 class Page(object):
     def __init__(self, driver, base_url='http://www.app.com/'):

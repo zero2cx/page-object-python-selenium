@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 # for maintainability we can seperate web objects by page name
 
 class MainPageLocatars(object):
@@ -9,6 +10,7 @@ class MainPageLocatars(object):
   LOGIN         = (By.CSS_SELECTOR, '#nav-flyout-ya-signin > a')
   SEARCH        = (By.ID, 'twotabsearchtextbox')
   SEARCH_LIST   = (By.ID, 's-results-list-atf')
+
 
 class LoginPageLocatars(object):
   EMAIL         = (By.ID, 'ap_email')

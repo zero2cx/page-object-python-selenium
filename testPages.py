@@ -1,19 +1,25 @@
+
 import unittest
+# noinspection PyUnresolvedReferences
 from selenium import webdriver
 from pages import *
 from testCases import test_cases
+# noinspection PyUnresolvedReferences
 from locators import *
+# noinspection PyUnresolvedReferences
 from selenium.webdriver.common.by import By
+
 
 # I am using python unittest for asserting cases.
 # In this module, there should be test cases.
 # If you want to run it, you should type: python <module-name.py>
 
+# noinspection PyPep8Naming
 class TestPages(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
-        #self.driver = webdriver.Firefox()
+        # self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox(executable_path='drivers/geckodriver.exe')
         self.driver.get("http://www.amazon.com")
 
     def test_page_load(self):
@@ -56,7 +62,8 @@ class TestPages(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
+
 if __name__ == "__main__":
     suite = unittest.TestLoader().loadTestsFromTestCase(TestPages)
+    # noinspection PyUnresolvedReferences
     unittest.TextTestRunner(verbosity=2).run(suite)
-
